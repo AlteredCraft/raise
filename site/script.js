@@ -62,14 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 
-    // Animate value rows
-    const valueRows = document.querySelectorAll('.value-row');
-    valueRows.forEach((row, index) => {
-        row.style.transitionDelay = `${index * 0.15}s`;
-        setTimeout(() => {
-            row.classList.add('visible');
-        }, 300 + (index * 150));
-    });
+    // Animate manifesto document
+    const manifestoDocument = document.querySelector('.manifesto-document');
+    if (manifestoDocument) {
+        manifestoDocument.classList.add('reveal');
+        observer.observe(manifestoDocument);
+    }
 
     // Animate problem cards
     const problemCards = document.querySelectorAll('.problem-card');
