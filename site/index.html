@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAISE - Responsible AI-assisted Software Engineering</title>
+    <meta name="description" content="A community framework for responsible AI-assisted software development, built on Transparency, Intent, and Empathy.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-logo">RAISE</div>
+            <div class="nav-links">
+                <a href="#manifesto" class="nav-link">Manifesto</a>
+                <a href="#principles" class="nav-link">Principles</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="https://github.com/AlteredCraft/raise" target="_blank" class="nav-link nav-link-github">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Community Framework · November 2025</div>
+            <h1 class="hero-title">
+                <span class="title-raise">RAISE</span>
+                <span class="title-subtitle">Responsible AI-assisted Software Engineering</span>
+            </h1>
+            <p class="hero-description">
+                A community-driven framework for finding the middle ground between AI bans and uncritical acceptance.
+                Built on <strong>Transparency</strong>, <strong>Intent</strong>, and <strong>Empathy</strong>.
+            </p>
+            <div class="hero-cta">
+                <a href="#manifesto" class="btn btn-primary">Read the Manifesto</a>
+                <a href="https://github.com/AlteredCraft/raise" class="btn btn-secondary">Contribute on GitHub</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="visual-block block-1"></div>
+            <div class="visual-block block-2"></div>
+            <div class="visual-block block-3"></div>
+        </div>
+    </header>
+
+    <section class="problem-space">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Challenge</h2>
+                <div class="section-ornament"></div>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card problem-left">
+                    <div class="problem-icon">🚫</div>
+                    <h3>AI Bans</h3>
+                    <p>Projects rejecting all AI contributions due to quality or copyright concerns</p>
+                </div>
+                <div class="problem-center">
+                    <div class="vs-indicator">
+                        <span>vs</span>
+                    </div>
+                    <div class="balance-line"></div>
+                </div>
+                <div class="problem-card problem-right">
+                    <div class="problem-icon">✨</div>
+                    <h3>Vibe Coding</h3>
+                    <p>Uncritical acceptance of AI outputs leading to "PR Slop" and quality collapse</p>
+                </div>
+            </div>
+            <div class="problem-insight">
+                <p><strong>The Reality:</strong> AI tools have lowered the barrier to creating code, but raised the cost of reviewing it.
+                "PR Slop" refers to verbose, subtly buggy, or hallucinatory code that looks correct at a glance but fails under edge cases.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="manifesto" class="manifesto-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The RAISE Manifesto</h2>
+                <p class="section-intro">We believe that if you commit code, you—not the AI—are the author, and you bear full responsibility for its effects on the system and your teammates.</p>
+            </div>
+
+            <div class="values-table">
+                <div class="values-header">
+                    <div class="values-col">We Value...</div>
+                    <div class="values-divider"></div>
+                    <div class="values-col">Over...</div>
+                </div>
+                <div class="value-row" data-index="0">
+                    <div class="value-primary">Human Understanding & Intent</div>
+                    <div class="value-arrow">→</div>
+                    <div class="value-secondary">Machine Generation & Speed</div>
+                </div>
+                <div class="value-row" data-index="1">
+                    <div class="value-primary">Verified Correctness</div>
+                    <div class="value-arrow">→</div>
+                    <div class="value-secondary">Plausible-Looking Output</div>
+                </div>
+                <div class="value-row" data-index="2">
+                    <div class="value-primary">Reviewer Empathy</div>
+                    <div class="value-arrow">→</div>
+                    <div class="value-secondary">Contributor Convenience</div>
+                </div>
+                <div class="value-row" data-index="3">
+                    <div class="value-primary">Transparent Provenance</div>
+                    <div class="value-arrow">→</div>
+                    <div class="value-secondary">Hidden Automation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="principles" class="principles-section">
+        <div class="container-wide">
+            <div class="section-header">
+                <h2 class="section-title">The Principles of RAISE</h2>
+                <div class="section-ornament"></div>
+            </div>
+
+            <div class="principles-grid">
+                <article class="principle-card" data-number="01">
+                    <div class="principle-number">01</div>
+                    <h3 class="principle-title">The Human is the Architect</h3>
+                    <p class="principle-text">AI is a tool for implementation, not the "contributor".</p>
+                </article>
+
+                <article class="principle-card" data-number="02">
+                    <div class="principle-number">02</div>
+                    <h3 class="principle-title">Review is Mandatory</h3>
+                    <p class="principle-text">No AI-generated code enters the codebase without human review. "LGTM" is insufficient; "I understand this" is the standard.</p>
+                </article>
+
+                <article class="principle-card" data-number="03">
+                    <div class="principle-number">03</div>
+                    <h3 class="principle-title">Own the Code</h3>
+                    <p class="principle-text">If you commit AI-generated code, you own it. "The AI wrote it" is never a valid excuse for a bug, security flaw, or logic error.</p>
+                </article>
+
+                <article class="principle-card" data-number="04">
+                    <div class="principle-number">04</div>
+                    <h3 class="principle-title">Transparency is Professionalism</h3>
+                    <p class="principle-text">We openly disclose which tools were used to generate code. Hiding the use of AI is a breach of trust.</p>
+                </article>
+
+                <article class="principle-card" data-number="05">
+                    <div class="principle-number">05</div>
+                    <h3 class="principle-title">Testing is the Truth</h3>
+                    <p class="principle-text">AI-generated code requires higher test coverage, not lower. Ideally, tests should be written by the human before generation (TDD).</p>
+                </article>
+
+                <article class="principle-card" data-number="06">
+                    <div class="principle-number">06</div>
+                    <h3 class="principle-title">Combat Bloat</h3>
+                    <p class="principle-text">We use AI to refactor and simplify, not to add unnecessary verbosity. We respect our teammates' time by aggressively pruning AI output.</p>
+                </article>
+
+                <article class="principle-card" data-number="07">
+                    <div class="principle-number">07</div>
+                    <h3 class="principle-title">Security by Design</h3>
+                    <p class="principle-text">We actively probe AI suggestions for known vulnerabilities (e.g., injection flaws, hallucinated dependencies) before implementation.</p>
+                </article>
+
+                <article class="principle-card" data-number="08">
+                    <div class="principle-number">08</div>
+                    <h3 class="principle-title">Skill Preservation & Growth</h3>
+                    <p class="principle-text">We use AI to explain complex concepts, not to bypass learning them. If you cannot explain the code you submitted, you did not write it.</p>
+                </article>
+
+                <article class="principle-card" data-number="09">
+                    <div class="principle-number">09</div>
+                    <h3 class="principle-title">Sustainable Pace</h3>
+                    <p class="principle-text">We do not use AI to create impossible deadlines. We use efficiency gains to improve code quality and work-life balance.</p>
+                </article>
+
+                <article class="principle-card" data-number="10">
+                    <div class="principle-number">10</div>
+                    <h3 class="principle-title">Ethical Sourcing</h3>
+                    <p class="principle-text">We prefer AI tools trained on ethically sourced data and respect the licenses of open-source code.</p>
+                </article>
+
+                <article class="principle-card" data-number="11">
+                    <div class="principle-number">11</div>
+                    <h3 class="principle-title">Continuous Adaptation</h3>
+                    <p class="principle-text">We continuously update our practices as AI models evolve, remaining skeptical of hype and focused on engineering fundamentals.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">About RAISE</h2>
+                    <p>RAISE is an effort, similar to The Agile Manifesto, to provide a community-derived framework for utilizing AI in the software development process.</p>
+                    <p>This framework addresses the phenomenon known as "The Quality Floor Collapse" and provides a viable, effective middle ground between the extremes of AI rejection and uncritical acceptance.</p>
+
+                    <div class="current-efforts">
+                        <h3>Current Efforts</h3>
+                        <ol class="effort-list">
+                            <li>
+                                <strong>Ideate on the Manifesto</strong>
+                                <span class="status-badge">In Progress</span>
+                            </li>
+                            <li>
+                                <strong>RAISE Manifest</strong>
+                                <p>Research and collect a set of tools and policies which exemplify the RAISE manifesto</p>
+                            </li>
+                            <li>
+                                <strong>RAISE Lab</strong>
+                                <p>Collaborate on tools which assist developers in aligning to the RAISE Manifesto</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Get Involved</h3>
+                        <p>RAISE is a community effort. We welcome contributions, feedback, and discussions from developers navigating the AI-assisted development landscape.</p>
+                        <a href="https://github.com/AlteredCraft/raise" class="btn btn-primary">Contribute on GitHub</a>
+                    </div>
+                </div>
+                <aside class="about-sidebar">
+                    <div class="sidebar-box">
+                        <h4>Core Foundation</h4>
+                        <ul class="foundation-list">
+                            <li>
+                                <div class="foundation-icon">🔍</div>
+                                <span>Transparency</span>
+                            </li>
+                            <li>
+                                <div class="foundation-icon">🎯</div>
+                                <span>Intent</span>
+                            </li>
+                            <li>
+                                <div class="foundation-icon">🤝</div>
+                                <span>Empathy</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box">
+                        <h4>Timeline</h4>
+                        <div class="timeline-item">
+                            <div class="timeline-date">November 2025</div>
+                            <div class="timeline-event">Manifesto Drafted</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">RAISE</div>
+                    <p class="footer-tagline">Responsible AI-assisted Software Engineering</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/AlteredCraft/raise" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/AlteredCraft/raise/blob/main/raise-manifesto.md" target="_blank" rel="noopener">Manifesto</a>
+                    <a href="https://github.com/AlteredCraft/raise/blob/main/research/init-research.md" target="_blank" rel="noopener">Research</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>A community-driven framework • Drafted November 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
