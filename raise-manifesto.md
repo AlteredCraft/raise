@@ -1,7 +1,9 @@
-# raise-manifesto
+# RAISE-manifesto
 
 The RAISE Community Proposal
+
 Drafted: November 2025
+
 Objective: RAISE is a community framework built on Transparency, Intent, and Empathy. We believe that if you commit code, you, not the AI—are the author, and you 
 bear full responsibility for its effects on the system and your teammates.
 
