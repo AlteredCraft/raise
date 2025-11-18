@@ -1,0 +1,229 @@
+# Related posts
+
+<post-1>
+---
+title: Countering PR Slop
+sub-title: The Progressive Path to responsible AI-Assisted Development
+URL: https://alteredcraft.com/p/stop-the-pr-slop
+---
+
+A message from a colleague (Reliability engineer at a large enterprise company) landed in my inbox this week. Their team’s internal architect had just submitted a PR with a note: “Ready for review.”
+
+The inspection of the PR revealed 6,000 lines of changes. Brand new documentation that made no sense. Code with no tests. Tests commented out. New code that nothing called.
+
+This pattern has earned its own name: PR Slop.
+
+The phenomenon is widespread enough that the podcast “The AI Daily Brief” devoted an episode to it, “RIP Vibe Coding. Feb 2025-Oct 2025” (link). The pattern is simple: prompt an AI to generate a complete solution, then dump the output onto reviewers. Minimal effort from one developer becomes maximum burden for others.
+
+The easy reaction is to call for a ban to AI tooling in software development. However, as I argued in Developers, AI Changed Everything. No, You’re Not Doomed, the tool itself is not the problem. A responsible approach to AI-assisted development exists. The challenge is execution.
+
+The Expectations Mismatch
+PR Slop reveals a fundamental gap between promise and reality. AI marketing suggests these tools can autonomously handle complex features. A system of distributed components, integrated subsystems, and existing architectural decisions cannot be one-shot into coherent code.
+
+AI is a powerful addition to your development toolkit. It is not a magic solution that removes the need for engineering judgment, iterative refinement, or responsibility for what ships.
+
+The healthy reset starts with acknowledging what AI coding assistants actually enable versus what we might hope they provide.
+
+Working Synchronously vs. Asynchronously
+The distinction between synchronous and asynchronous AI collaboration matters significantly, especially when first adopting these tools.
+
+Synchronous work means active involvement in the AI’s progression through the problem. You remain engaged, watching decisions unfold, correcting course when the approach diverges. AI-assisted autocomplete represents the simplest form of this pattern. CLI tools like Claude Code or Gemini Code can operate synchronously when you follow their execution step by step.
+
+Asynchronous work means initiating the AI, then stepping away until it completes. You return to review a finished PR. This approach can work with mature practices and appropriate constraints. Without them, it produces PR Slop.
+
+A Progressive Adoption Path
+For developers new to AI coding assistance, the synchronous approach builds both skill and safeguards. Start here:
+
+1. Planning Mode Only
+
+Begin every feature in planning mode with writes disabled. Iterate on the approach with the AI. Work on the smallest valuable increment. Define what “done” looks like before implementation starts.
+
+You can use AI purely as a planning aid and implement everything yourself. This is perfectly valid and avoids many risks while gaining clarity on requirements.
+
+2. Synchronous Implementation
+
+If you choose to continue with AI during implementation, maintain active involvement. Use AI-assisted autocomplete, or work with an agent but follow its progress. Crucially, stop and correct at the first sign the implementation has diverged from the plan.
+
+Watch for AI reward hacking behaviors. Commenting out failing tests is a classic example. The AI optimizes for appearing to complete the task rather than actually solving the problem. Your synchronous oversight catches this.
+
+3. Learning from the Process
+
+Watching AI tools work can teach patterns and approaches you might not have considered. I have observed AI agents diverge from the plan I approved, only to realize the divergence represented a superior solution. This learning compounds when you stay engaged.
+
+4. Advancing to Asynchronous (Optional)
+
+As your practices mature, asynchronous workflows become viable with proper constraints:
+
+Limit scope to planning: Ask the AI to plan three solutions and list trade-offs for each. Review when you return. This minimizes risk while gaining value.
+
+Require tests and limit scope: If implementation is involved, constrain the work to small, well-tested changes. The AI does not mind being told “tests are required” as much as human teammates might.
+
+Always use branch protection: Every AI-generated change results in a PR. You review first, not your colleagues. You own the quality and appropriateness of what reaches the team.
+
+The Responsibility Constant
+The core principle remains consistent across all adoption stages: you are responsible for what ships. The AI is a tool that amplifies your capabilities. It does not replace your judgment, your knowledge of the system, or your accountability to the team. PR Slop emerges when developers attempt to outsource this responsibility. The remedy is maintaining engineering discipline while learning to work effectively with a powerful new capability.
+
+If you receive PR slop, work with the sender. Planning mode first. Synchronous implementation with active oversight. Small, tested increments instead of 6,000-line dumps. The process is slower than “prompt and pray,” but the PRs are reviewable and the code actually works.
+
+The path forward combines the efficiency AI enables with the responsibility the craft has always demanded.
+</post-1>
+
+<post-2>
+---
+title: Developers, AI Changed Everything. No, You're Not Doomed
+sub-title: Why the best developers are getting better, not obsolete
+URL: https://alteredcraft.com/p/developers-ai-changed-everything
+---
+
+There’s an essay making the rounds by Simon Højberg called “The Programmer Identity Crisis.” If you haven’t read it, the core argument resonates with many developers right now: AI is fundamentally disrupting the craft of programming, and for those who identify deeply with that craft, it feels like an existential threat.
+
+I empathize with Simon. His concerns are valid, and his experience is real. For developers who find deep satisfaction in the artisanship of code, the elegance of a well-crafted function and the satisfaction of refactoring toward clarity, AI’s “autocomplete on steroids” approach can feel like vandalism.
+
+If you’re like me, and you came away from that essay feeling more anxious than before, I want to offer an additional lens. Not as a rebuttal to Simon’s perspective, but as an alternative frame that might ease some of the dread you’re carrying.
+
+Yes, This Time Is Different
+Simon’s essay expresses a real fear: that AI is collapsing the quality floor in software development. When he describes AI-generated code that “works” but violates basic craft principles, he’s articulating something many of us feel viscerally.
+
+My take is less dire, but let’s be honest about what’s happening. This disruption operates across two dimensions that we need to understand:
+
+Dimension 1: The Scale of Who Can Build
+We’ve seen this before. The Stack Overflow era gave us the “copy-paste developer” meme. But even then, you needed baseline knowledge to use Stack Overflow effectively. You needed to know what to search for, evaluate solutions, and integrate the pieces. Stack Overflow offered missing Legos; you still had to build the structure.
+
+AI collapsed that barrier entirely. It dropped from “understand code syntax” to “describe your problem.” The population operating with complete trust in code they did not write didn’t just grow, it exploded. People with minimal technical understanding are now shipping applications.
+
+Dimension 2: The Risk Awareness Gap
+The deeper problem is that many of these new builders don’t understand that a spectrum of rigor has always existed in software development. They’re shipping AI-generated code to production systems handling customer data, financial transactions, and authentication. These are contexts where “mostly works” creates real risk.
+
+This spectrum isn’t new. We’ve always matched our rigor to context. YOLO for weekend projects, architectural discipline for payment systems. What changed is the scale. The barrier to building dropped, but awareness of when different levels of rigor matter didn’t keep pace.
+
+And yet AI is a tide that lifts all boats. It lowered the floor for those operating at high trust, but it also raised the ceiling for developers who understand this spectrum. The leverage available to those who can navigate between approaches and apply the right level of rigor to the right context is genuinely transformative.
+
+The Trust Spectrum We’ve Always Navigated
+What’s changed is that AI amplifies both ends. It dramatically expands who can build software (the access end) while simultaneously increasing the potential impact when things go wrong (the risk end). This amplification demands we become more intentional about where we operate on that spectrum at any given moment.
+
+
+
+
+Navigating the Trust Spectrum
+Understanding the Two Orientations
+While this is a spectrum, developers tend to cluster around two approaches, and it’s important to understand that both care deeply about code quality:
+
+Craft-Oriented Developers (like Simon from the essay that sparked this discussion) find satisfaction in the elegance of implementation itself: the well-architected solution, the clean abstraction, the minimal codebase. Their code quality focus is obvious and inherent. When Simon talks about AI violating craft principles, he’s defending something real and valuable.
+
+Delivery-Oriented Developers find satisfaction in solving user problems and shipping features. What often gets missed is that they care just as deeply about code quality, because poor quality creates delivery risk. Bugs delay releases. Technical debt slows velocity. Bad architecture causes outages. For them, quality isn’t about elegance but about sustainable, reliable delivery.
+
+Both types can leverage AI effectively:
+
+Craft-focused developers can use AI to explore more design patterns quickly, maintain quality standards across larger codebases, and focus on truly complex architectural decisions
+
+Delivery-focused developers can use AI to accelerate implementation while maintaining their quality bar, freeing them to focus on user needs and system reliability
+
+The key isn’t which type you are. It’s understanding that we all need to move along the rigor spectrum based on context, regardless of our natural inclination.
+
+When High Trust in AI is Appropriate
+The anxious voices often miss an important truth. There are contexts where “vibe coding” (operating with complete trust in AI-generated code and minimal validation) isn’t just acceptable, it’s optimal. The same developer who scrutinizes every line of authentication architecture on Monday should absolutely accept AI output with minimal review for the POC of a concept to explore.
+
+Low-Risk Contexts Where Speed Beats Precision:
+
+Personal learning projects exploring new technologies
+
+True proof-of-concepts (emphasis on “proof”, not production prototypes)
+
+Non critical path internal tools
+
+Hackathon entries and rapid experiments
+
+Automation scripts for your own workflow
+
+Even in these low-risk scenarios, the effectiveness of AI is directly linked to the context you provide it. Thoughtful investment in context engineering for these agents will pay dividends. A well-crafted prompt with clear constraints and examples will generate significantly better output than a vague request. Use the AI’s initial output as a mechanism to refine your context. Each iteration teaches you how to better guide the AI toward your intended outcome.
+
+Even craft-oriented developers can benefit from this approach. Operate with high trust in AI output to rapidly explore three different architectural approaches, then apply your craft sensibilities to the one that shows most promise. AI becomes your rapid prototyping engine, not your final implementation partner.
+
+POCs: There’s a critical distinction between a “true POC” built to validate an approach and a “POC” that ships to production.
+
+POCs are eventually deleted, not shipped!
+
+Leveraging AI in Higher-Risk Environments
+When the stakes rise to production systems, customer data, and financial transactions, the game changes entirely. This is where systems thinking becomes your competitive advantage, not despite AI but because of it.
+
+The Simple Test: Who Needs to Trust This Code?
+
+When it’s just you or your small team, you’re in low-risk territory. You control the consequences, you can fix things quickly. But the moment a third party (customer, partner, regulator) needs to trust this code, you’ve entered high-risk territory. Their data, their money, their business operations now depend on your architectural choices.
+
+The Systems Thinking Advantage
+In these high-risk environments, we still leverage AI to implement the boilerplate code, but critically as a collaborator. You bring your systems-thinking skills, orchestrating a collection of agent personas to help grapple with the complexity and de-risk development. Think of yourself as directing a team of specialists:
+
+An architecture adherence agent that validates against your system’s patterns
+
+A security review agent that catches common vulnerabilities
+
+A performance analysis agent that identifies bottlenecks
+
+A dependency management agent that tracks breaking changes
+
+To be clear, code shipping to production is still human reviewed. Every line. But AI agents help focus that review effort and tame the complexity. You collaborate with them, not abdicate to them.
+
+Anthropic themselves uses this pattern: aggressive scanning agents flag potential issues in PRs, followed by false-positive detection agents to reduce noise. The result? Human reviewers see filtered, prioritized concerns rather than drowning in alerts. You remain the decision maker, but with better intelligence about what needs your attention.
+
+AI can be leveraged to handle implementation details like modularization, variable naming, and syntax, freeing you to focus on what humans have always been better at: recognizing systemic patterns, anticipating failure modes at scale, understanding organizational context, and ensuring the system actually serves user needs. The value isn’t in writing perfect code. It’s in knowing which imperfect code will cause problems six months from now.
+
+Reality Check: The 10x Myth
+
+Manager expect AI to bring 10x productivity? POCs, yes. Production code, no. Expect 30-50% velocity gains on well-bounded tasks.
+
+Spectrum Awareness as the Core Skill
+So where does this leave us? The software development world is shifting, but not toward the binary future many predict. Success means learning to leverage AI along the risk spectrum we’ve always navigated, now amplified.
+
+The developers who will thrive understand that success means:
+
+Recognizing where each piece of work falls on the trust spectrum
+
+Applying high trust in AI when speed and exploration matter most
+
+Shifting to architectural thinking when third parties depend on your code
+
+Constantly asking: Who’s affected? What’s the blast radius? How hard to fix if wrong?
+
+The common pitfalls to avoid:
+
+Applying the same approach to every problem
+
+Forgetting to ask what level of rigor this specific moment demands
+
+Here’s the crucial insight: You already do this. You’re already both.
+
+Monday morning: You’re architecting a payment integration, thinking about failure modes, edge cases, audit trails
+
+Tuesday afternoon: You’re operating with high trust in AI for a client demo
+
+Wednesday: You’re somewhere in between, fixing a bug with moderate care
+
+Thursday: You’re reviewing a junior’s PR, applying maximum scrutiny
+
+Friday hackathon: You’re back to pure experimentation mode
+
+That’s not inconsistency. That’s contextual intelligence. The same person, different points on the spectrum, appropriate to each moment.
+
+You already navigate this spectrum, but applying it consciously to AI collaboration requires practice at first. The conceptual skill exists. The muscle memory for when to trust AI output versus when to scrutinize it, that takes repetition. Give yourself space to calibrate.
+
+The AI tide lifted all boats. But the real leverage, the defensibility and long-term value, comes from consciously choosing where to operate on the spectrum for each decision, each feature, each line of code that matters.
+
+Your Turn: A Simple Framework
+Here’s your decision matrix for any piece of work:
+
+Ask three questions:
+
+Who’s affected if this fails? (Just me → My team → Customers → Many customers)
+
+What’s the blast radius? (Local function → Service → System → Enterprise)
+
+How hard to fix if wrong? (Seconds → Hours → Days → Irreversible)
+
+Score it. Apply the right level of rigor.
+
+The reality we need to accept: AI isn’t going away. It won’t return to the box. The genie is out, the tools are here, and they’re only getting more capable. Fighting this change is like opposing the internet in 1995.
+
+Regardless of whether you cherish development as a craft or chase delivery velocity, there’s a path forward. The same spectrum of rigor we’ve always navigated still exists. AI just amplified it. Master where you are on that spectrum for each decision, and AI becomes a tool that amplifies what you’re already good at.
+
+The future belongs to developers who ask “what level of trust does this moment require?” not “am I for or against AI?”
+</post-2>
