@@ -643,8 +643,73 @@ a:hover {
     border-radius: 4px;
 }
 
+.principles-list {
+    list-style: none;
+    counter-reset: principle-counter;
+    padding-left: 0;
+}
+
+.principle-item {
+    counter-increment: principle-counter;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: var(--space-lg);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--color-slate-700);
+}
+
+.principle-item::before {
+    content: counter(principle-counter, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-teal-600);
+    line-height: 1.6;
+}
+
+.principle-item strong {
+    color: var(--color-slate-900);
+    font-weight: 600;
+}
+
+.document-footer {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--color-slate-200);
+}
+
+.document-footer-text {
+    font-size: 0.9375rem;
+    color: var(--color-slate-600);
+    margin: 0;
+    text-align: center;
+}
+
+.document-footer-text i {
+    margin-right: var(--space-xs);
+    color: var(--color-slate-900);
+}
+
+.document-link {
+    color: var(--color-teal-600);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: var(--transition-smooth);
+}
+
+.document-link:hover {
+    color: var(--color-teal-700);
+    text-decoration-thickness: 2px;
+}
+
 /* ===================================
-   Principles Section
+   Principles Section (Legacy - Removed)
    =================================== */
 
 .principles-section {
@@ -1032,6 +1097,15 @@ a:hover {
     .values-document-table th,
     .values-document-table td {
         padding: var(--space-sm);
+    }
+
+    .principle-item {
+        padding-left: 2.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .principle-item::before {
+        font-size: 1.125rem;
     }
 
     .principles-grid {

@@ -54,14 +54,6 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add reveal class to elements that should animate
 document.addEventListener('DOMContentLoaded', () => {
-    // Animate principle cards
-    const principleCards = document.querySelectorAll('.principle-card');
-    principleCards.forEach((card, index) => {
-        card.classList.add('reveal');
-        card.style.transitionDelay = `${index * 0.1}s`;
-        observer.observe(card);
-    });
-
     // Animate manifesto document
     const manifestoDocument = document.querySelector('.manifesto-document');
     if (manifestoDocument) {
@@ -81,6 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionHeaders.forEach(header => {
         header.classList.add('reveal');
         observer.observe(header);
+    });
+
+    // Animate principles list items
+    const principleItems = document.querySelectorAll('.principle-item');
+    principleItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-20px)';
+        item.style.transition = 'all 0.5s ease-out';
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateX(0)';
+        }, 600 + (index * 80));
     });
 });
 
@@ -121,13 +125,13 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Add hover effect enhancement for principle cards
-const principleCards = document.querySelectorAll('.principle-card');
-principleCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-    });
-});
+// Hover effect enhancement (legacy - kept for potential future use)
+// const principleCards = document.querySelectorAll('.principle-card');
+// principleCards.forEach(card => {
+//     card.addEventListener('mouseenter', function() {
+//         this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+//     });
+// });
 
 // Enhanced CTA button effects
 const buttons = document.querySelectorAll('.btn');
