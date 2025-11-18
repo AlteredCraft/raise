@@ -54,13 +54,6 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add reveal class to elements that should animate
 document.addEventListener('DOMContentLoaded', () => {
-    // Animate manifesto document
-    const manifestoDocument = document.querySelector('.manifesto-document');
-    if (manifestoDocument) {
-        manifestoDocument.classList.add('reveal');
-        observer.observe(manifestoDocument);
-    }
-
     // Animate problem cards
     const problemCards = document.querySelectorAll('.problem-card');
     problemCards.forEach(card => {
