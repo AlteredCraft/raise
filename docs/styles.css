@@ -1091,8 +1091,16 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
+    .problem-left {
+        order: 1;
+    }
+
     .problem-center {
-        order: -1;
+        order: 2;
+    }
+
+    .problem-right {
+        order: 3;
     }
 
     .balance-line {
