@@ -3,14 +3,14 @@
 
 ## Purpose
 This is an effort, similar to The Agile Manifesto (https://agilemanifesto.org/) to provide a community derived framework 
-for utilizing AI in the software development process. 
+for utilizing AI in the software development process.
 
-RAISE is a community framework built on Transparency, Intent, and Empathy. We believe that if you commit code, you, not the AI—are the author, and you 
-bear full responsibility for its effects on the system and your teammates.
+**Who is RAISE for**: RAISE is meant to be a guide for anyone using AI to assist in building software applications. 
+RAISE is even more relevent to individuals collaborating with others to build software and/or building software that others have some reliance and trust in.
 
-**Premise**: The current landscape of software development in late 2025 is defined by a polarization between "AI bans" (projects rejecting all AI contributions due 
-to quality or copy right concerns) and "Vibe Coding" (uncritical acceptance of AI outputs). Research from mid-to-late 2025 highlights a phenomenon known as 
-"The Quality Floor Collapse."
+RAISE is a community framework built on Transparency, Intent, and Empathy. We believe that if you commit code, **you**, not the AI, are the author. You bear full responsibility for its effects on the system and your teammates.
+
+**Premise**: The current landscape of software development in late 2025 is defined by a polarization between "AI bans" (projects rejecting all AI contributions due to quality or copy right concerns) and "Vibe Coding" (uncritical acceptance of AI outputs). Research from mid-to-late 2025 highlights a phenomenon known as "The Quality Floor Collapse."
 
 RAISE defines a set of principles to find a viable, effective middle ground.
 
